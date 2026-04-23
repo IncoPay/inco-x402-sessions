@@ -1,0 +1,53 @@
+{
+  "name": "inco-x402-sessions",
+  "version": "0.1.0",
+  "description": "Sign-once, settle-many x402 session scheme for private payments on Solana + Inco Lightning.",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./scheme": {
+      "types": "./dist/scheme-server.d.ts",
+      "default": "./dist/scheme-server.js"
+    },
+    "./solana": {
+      "types": "./dist/solana.d.ts",
+      "default": "./dist/solana.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.0",
+    "@inco/solana-sdk": "^0.0.2",
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@x402/core": "^2.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@x402/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
