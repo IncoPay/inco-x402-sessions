@@ -1,7 +1,7 @@
 {
-  "name": "inco-x402-sessions",
-  "version": "0.1.0",
-  "description": "Sign-once, settle-many x402 session scheme for private payments on Solana + Inco Lightning.",
+  "name": "solana-x402-sessions",
+  "version": "1.0.0",
+  "description": "Sign-once, settle-many x402 session scheme for confidential micropayments on Solana, powered by Inco Lightning.",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -49,5 +49,16 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0"
-  }
+  },
+  "keywords": [
+    "x402",
+    "solana",
+    "inco",
+    "confidential",
+    "fhe",
+    "session",
+    "micropayments",
+    "usdc",
+    "sessions"
+  ]
 }
